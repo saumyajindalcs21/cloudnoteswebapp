@@ -2,20 +2,28 @@ import { signInWithEmailAndPassword } from "firebase/auth";
 import React, { useState } from "react";
 import { auth } from "../fbconfig";
 
+import { useNavigate } from "react-router-dom";
+
 const SignIn = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const signIn = (e) => {
+  const navigate = useNavigate();
+
+
+  const signIn = async (e) => {
     e.preventDefault();
-    signInWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
+    try{
+        const userCredential = await signInWithEmailAndPassword(auth, email, password);
         console.log(userCredential);
-      })
-      .catch((error) => {
+        const user = userCredential.user;
+        localStorage.setItem('token', user.accessToken);
+        localStorage.setItem('user', JSON.stringify(user));
+        navigate("/");
+    }catch(error) {
         console.log(error);
-      });
-  };
+      }
+  }
 
   return (
     <div className="sign-in-container">
