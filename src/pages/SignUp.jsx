@@ -23,8 +23,8 @@ const navigate = useNavigate();
 
   return (
     <div className="sign-in-container">
-      <form onSubmit={signUp}>
-        <h1>Create Account</h1>
+      <form onSubmit={signUp} className="signup-form">
+        <h1 className="create">Create New Account</h1>
         <input
           type="email"
           placeholder="Enter your email"
@@ -37,7 +37,8 @@ const navigate = useNavigate();
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         ></input>
-        <button type="submit">Sign Up</button>
+        <button type="submit" className="submit-button">Sign Up</button>
+        <a href="/login" className="login-text">Login to your existing account</a>
       </form>
     </div>
   );
