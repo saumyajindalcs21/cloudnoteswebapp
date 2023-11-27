@@ -13,11 +13,13 @@ import SignUp from './pages/SignUp';
 import Protected from './components/Protected';
 import Home from './pages/Home';
 import Login from './pages/Login';
+import CreatePost from './pages/CreatePost';
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<App/>}>
 <Route path='signup' element={<SignUp/>} />
 <Route path='login' element={<Login/>} />
+<Route path='CreatePost' element={<CreatePost/>} />
    <Route path='/' element={<Protected />} >
    <Route path='/' element={<Home/>} />
    </Route>

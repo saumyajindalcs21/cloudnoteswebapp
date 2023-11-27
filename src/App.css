@@ -8,7 +8,112 @@
   background: linear-gradient(#A9F1DF, #FFBBBB);
 }
 
+/* Basic Button Styles */
+.notebutton {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border: 2px solid #3498db;
+  border-radius: 5px;
+  color: #3498db;
+  background-color: #fff;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
 
+/* Hover Effect */
+.notebutton:hover {
+  background-color: #3498db;
+  color: #fff;
+}
+
+/* Additional Styles for Different States (Optional) */
+.notebutton:active {
+  transform: scale(0.95);
+}
+
+.notebutton:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.7);
+}
+.logbu {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border: 2px solid #e74c3c; /* Red border color */
+  border-radius: 5px;
+  color: #e74c3c; /* Red text color */
+  background-color: #fff; /* White background color */
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+/* Hover Effect */
+.logbu:hover {
+  background-color: #e74c3c; /* Red background color on hover */
+  color: #fff; /* White text color on hover */
+}
+
+/* Additional Styles for Different States (Optional) */
+.logbu:active {
+  transform: scale(0.95);
+}
+
+.logbu:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(231, 76, 60, 0.7); /* Red shadow on focus */
+}
+
+/* Customization */
+/* Uncomment and modify as needed
+.notebutton {
+  background-color: #2ecc71;
+  border-color: #2ecc71;
+  color: #fff;
+}
+
+.notebutton:hover {
+  background-color: #27ae60;
+  border-color: #27ae60;
+}
+*/
+.cloud {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border: 2px solid #3498db; /* Blue border color */
+  border-radius: 5px;
+  color: #3498db; /* Blue text color */
+  background-color: #fff; /* White background color */
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+/* Hover Effect */
+.cloud:hover {
+  background-color: #3498db; /* Blue background color on hover */
+  color: #fff; /* White text color on hover */
+}
+
+/* Additional Styles for Different States (Optional) */
+.cloud:active {
+  transform: scale(0.95);
+}
+
+.cloud:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.7); /* Blue shadow on focus */
+}
+.newnote{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  
+}
 .signin-form,
 .signup-form{
   display: flex;
@@ -39,4 +144,89 @@ input,
 }
 input{
   border: 2px;
+}
+.createPostPage {
+  width: 100%;
+  height: calc(100vh - 80px);
+  display: grid;
+  place-items: center;
+}
+.cpContainer {
+  width: 500px;
+  height: auto;
+  padding: 20px;
+  background-image: linear-gradient(to left bottom, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+  border-radius: 12px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+.cpContainer h1 {
+  text-align: center;
+}
+
+.cpContainer label {
+  font-size: 25px;
+}
+.cpContainer .inputGp {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.inputGp input,
+.inputGp textarea {
+  font-size: 16px;
+  padding: 10px;
+  border: 1px solid #ddd; /* Light gray border */
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 15px;
+}
+
+.inputGp input {
+  height: 40px;
+  width: 490px;
+}
+.inputGp textarea {
+  height: 150px;
+  resize: vertical;
+}
+
+
+.cpContainer button {
+  margin-top: 20px;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+}
+input,
+textarea {
+  margin-top: 5px;
+}
+.newnote {
+  font-size: 36px;
+  color: #3498db; /* Blue text color */
+  margin-bottom: 20px;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Underline Effect on Hover */
+
+
+/* Box Shadow on Focus */
+.newnote:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgba(52, 152, 219, 0.7); /* Blue shadow on focus */
+}
+.titleh {
+  display: block;
+  font-size: 18px;
+  color: #27ae60; /* Default text color */
+  margin-bottom: 10px;
+  font-weight: bold;
 }
